@@ -21,6 +21,8 @@ app.createTodo = function (){
     $('#textBox').on('keypress', function(e){
             if(e.which === 13){
                 app.listContainer.append('<li>'+ app.deleteIcon + $(this).val()+ '</li>')
+                // reset textbox
+                $(this).val('');
             }
     })
 }
